@@ -1,7 +1,0 @@
-#!/bin/sh
-# metacity --replace ccp &
-mutter &
-
-# compton &
-
-exec ~/.local/bin/nexmark

@@ -16,6 +16,11 @@ endif
 dependency('glib-2.0')
 dependency('gobject-introspection-1.0')
 dependency('gtk+-3.0')
+dependency('librsvg-2.0')
+dependency('evince-document-3.0')
+dependency('evince-view-3.0')
+dependency('libgepub')
+dependency('dbus-python')
 
 bindir = join_paths(get_option('prefix'), get_option('bindir'))
 libdir = join_paths(get_option('prefix'), get_option('libdir'))
@@ -38,6 +43,6 @@ subdir('data')
 install_subdir('nexmark', install_dir: python_dir)
 
 configure_file(input: 'nexmark.in', output: 'nexmark', configuration: conf, install_dir: bindir)
-install_data(sources: 'startnexmark', install_dir: bindir)
+configure_file(input: 'startnexmark.in', output: 'startnexmark', configuration: conf, install_dir: bindir)
 
 meson.add_install_script('meson/meson-postinstall.sh')

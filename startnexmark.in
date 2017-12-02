@@ -1,0 +1,4 @@
+#!/bin/sh
+
+mutter &
+exec @BIN_DIR@/nexmark
