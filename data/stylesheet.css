@@ -1,0 +1,79 @@
+.home headerbar {
+  background: #f8f5ef;
+  border: none;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.4);
+  box-shadow: none;
+  padding: 10px 15px;
+}
+
+.home headerbar .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.home headerbar .subtitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.home .footer {
+  background: #f8f5ef;
+  border-top: 1px solid rgba(151, 151, 151, 0.4);
+}
+
+.home .footer-item {
+  padding: 16px;
+}
+
+.home .footer-item.active {
+  padding-bottom: 13px;
+  border-bottom: 3px solid blue;
+}
+
+/* button {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.03);
+} */
+
+.background {
+  background: url("resource:///io/mspencer/Nexmark/paper_landscape.png");
+}
+
+* {
+  font-family: Ubuntu, sans-serif;
+}
+
+.subheader {
+  /* background: #fafafa; */
+  background: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  /* border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; */
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+.book,
+.collection {
+  padding: 20px 10px;
+}
+
+.collection grid {
+  background-color: white;
+  padding: 8px;
+  border-radius: 3px;
+  box-shadow: 0 1px #ffffff inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+.book image {
+  border-radius: 1px;
+  box-shadow: 0 1px #ffffff inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+.book:first-child,
+.collection:first-child {
+  padding-left: 20px;
+}

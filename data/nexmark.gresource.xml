@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/mspencer/Nexmark">
+    <file>cover.svg</file>
+    <file>paper_landscape.png</file>
+    <file>paper_portrait.png</file>
+    <file>stylesheet.css</file>
+  </gresource>
+</gresources>

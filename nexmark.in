@@ -1,0 +1,35 @@
+#!@PYTHON@
+
+import gi
+import os
+import signal
+import sys
+
+from gi.repository import Gio
+import nexmark
+
+
+pkgdatadir = '@DATA_DIR@'
+
+# Copied from Lollypop music player
+def install_excepthook():
+    """ Make sure we exit when an unhandled exception occurs. """
+    from gi.repository import Gtk
+    old_hook = sys.excepthook
+
+    def new_hook(etype, evalue, etb):
+        old_hook(etype, evalue, etb)
+        while Gtk.main_level():
+            Gtk.main_quit()
+        sys.exit()
+    sys.excepthook = new_hook
+
+
+if __name__ == '__main__':
+    install_excepthook()
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
+
+    nexmark.init(pkgdatadir)
+    status = nexmark.run('@VERSION@', pkgdatadir, '@LIB_DIR@')
+
+    sys.exit(status)
