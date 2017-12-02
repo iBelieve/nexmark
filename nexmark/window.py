@@ -14,12 +14,12 @@ class Window(Gtk.ApplicationWindow):
         self.stack.add(self.reader)
         self.add(self.stack)
 
-        # self.fullscreen()
+        self.fullscreen()
 
-    # def do_realize(self):
-    #     Gtk.Window.do_realize(self)
-    #     self.props.window.props.cursor = Gdk.Cursor(
-    #         Gdk.CursorType.BLANK_CURSOR)
+    def do_realize(self):
+        Gtk.Window.do_realize(self)
+        self.props.window.props.cursor = Gdk.Cursor(
+            Gdk.CursorType.BLANK_CURSOR)
 
     def show_settings(self):
         window = SettingsWindow(self)
