@@ -1,10 +1,15 @@
 import QtQuick 2.7
 import "../components"
 
-Item {
+MouseArea {
+    id: item
     property var book
 
     width: 130
+
+    onClicked: {
+        app.newWindow(Qt.resolvedUrl("../reader/ReaderWindow.qml"), { from: item, book: book })
+    }
 
     Image {
         id: image

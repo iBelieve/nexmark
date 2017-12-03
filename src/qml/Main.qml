@@ -12,4 +12,18 @@ Win.Window {
 
         anchors.fill: parent
     }
+
+    function newWindow(path, args) {
+        if (!args) args = {}
+
+        args.parent = app
+
+        var component = Qt.createComponent(path)
+        if (component.status === Component.Error) {
+            console.error("Unable to load object: " + path + "\n" + component.errorString())
+            return null
+        }
+
+        return component.createObject(app, args)
+    }
 }
