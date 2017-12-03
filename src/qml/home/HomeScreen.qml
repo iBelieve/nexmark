@@ -1,23 +1,23 @@
 import QtQuick 2.7
+import io.mspencer.Nexmark 1.0
 import "../components"
 
 Column {
-    property alias books: booksList.model
-    // property alias pocketArticles: pocketList.model
+    id: column
 
     Header {}
-    Subheader { text: "Books" }
 
-    ListView {
+    ListSection {
         id: booksList
-        anchors.left: parent.left
-        anchors.right: parent.right
+        title: "Books"
+        placeholder: "No books yet"
 
-        height: 100
-        orientation: Qt.Horizontal
+        itemHeight: 180
+        model: BooksManager.books
 
         delegate: BookItem {
-            book: books[index]
+            book: model
+            height: booksList.itemHeight
         }
     }
 

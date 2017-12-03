@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.glade": "xml",
+        "qqmlapplicationengine": "cpp",
+        "qguiapplication": "cpp",
+        "typeinfo": "cpp"
+    },
+    "cSpell.words": [
+        "Nexmark"
+    ]
+}

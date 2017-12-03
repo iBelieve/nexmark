@@ -4,39 +4,23 @@ import "../components"
 Item {
     property var book
 
-    width: 120
-    height: 180
+    width: 130
 
-    Column {
-        anchors {
-            topMargin: 15
-            bottomMargin: 10
-            leftMargin: 5
-            rightMargin: 5
-            fill: parent
-        }
-        spacing: 10
+    Image {
+        id: image
 
-        Image {
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: source.width/source.height * height
-            height: parent.height - parent.spacing - label.height
+        anchors.centerIn: parent
 
-            fillMode: Image.PreserveAspectFit
-            source: book.cover
-        }
+        width: source.width/source.height * height
+        height: parent.height - 30
 
-        Label {
-            id: label
+        fillMode: Image.PreserveAspectFit
+        source: book.cover
+        mipmap: true
 
-            anchors.left: parent.left
-            anchors.right: parent.right
-            height: implicitHeight * maximumLineCount/lineCount
-
-            text: book.title
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.Wrap
-            maximumLineCount: 2
+        layer.enabled: true
+        layer.effect: Elevation {
+            elevation: 2
         }
     }
 }

@@ -10,9 +10,11 @@
 	<file>qml/components/Elevation.qml</file>
 	<file>qml/components/Header.qml</file>
 	<file>qml/components/Label.qml</file>
+	<file>qml/components/Scrollbar.qml</file>
 	<file>qml/components/Subheader.qml</file>
 	<file>qml/home/BookItem.qml</file>
 	<file>qml/home/HomeScreen.qml</file>
+	<file>qml/home/ListSection.qml</file>
 	<file>qml/qmldir</file>
 </qresource>
 
