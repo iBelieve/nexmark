@@ -1,0 +1,19 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+
+<qresource>
+	<file>qml/DateTime.qml</file>
+	<file>qml/Main.qml</file>
+	<file>qml/Object.qml</file>
+	<file>qml/Theme.qml</file>
+	<file>qml/components/BoxShadow.qml</file>
+	<file>qml/components/Elevation.qml</file>
+	<file>qml/components/Header.qml</file>
+	<file>qml/components/Label.qml</file>
+	<file>qml/components/Subheader.qml</file>
+	<file>qml/home/BookItem.qml</file>
+	<file>qml/home/HomeScreen.qml</file>
+	<file>qml/qmldir</file>
+</qresource>
+
+</RCC>
