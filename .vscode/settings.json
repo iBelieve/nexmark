@@ -3,7 +3,8 @@
         "*.glade": "xml",
         "qqmlapplicationengine": "cpp",
         "qguiapplication": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "kzip": "cpp"
     },
     "cSpell.words": [
         "Nexmark"

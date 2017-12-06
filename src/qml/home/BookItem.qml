@@ -6,22 +6,18 @@ MouseArea {
     property var book
 
     width: 130
+    height: parent.height
 
     onClicked: {
         app.newWindow(Qt.resolvedUrl("../reader/ReaderWindow.qml"), { from: item, book: book })
     }
 
-    Image {
-        id: image
-
+    BookCover {
         anchors.centerIn: parent
 
-        width: source.width/source.height * height
-        height: parent.height - 30
-
-        fillMode: Image.PreserveAspectFit
         source: book.cover
-        mipmap: true
+        maxSize.width: parent.width - 30
+        maxSize.height: parent.height - 30
 
         layer.enabled: true
         layer.effect: Elevation {

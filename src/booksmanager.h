@@ -7,27 +7,7 @@
 #include <QtSql/QSqlDatabase>
 #include <QtCore/QDebug>
 
-class Book : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(int id MEMBER id CONSTANT)
-    Q_PROPERTY(QString title MEMBER title CONSTANT)
-    Q_PROPERTY(QString path MEMBER path CONSTANT)
-    Q_PROPERTY(bool hasCover MEMBER hasCover CONSTANT)
-    Q_PROPERTY(QUrl cover READ cover CONSTANT)
-
-public:
-    Book(int id, QString title, QString path, bool hasCover, QObject *parent = nullptr)
-        : QObject(parent), id(id), title(title), path(path), hasCover(hasCover) {}
-
-
-    QUrl cover() const;
-
-    int id;
-    QString title;
-    QString path;
-    bool hasCover;
-};
+class Book;
 
 class BooksManager : public QObject
 {
@@ -41,6 +21,10 @@ public:
 
     QQmlListProperty<Book> books() {
         return QQmlListProperty<Book>(this, m_books);
+    }
+
+    Q_INVOKABLE Book *bookAt(int index) const {
+        return m_books[index];
     }
 
 public slots:

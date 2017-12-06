@@ -35,7 +35,8 @@ Rectangle {
         Transition {
             to: "maximized"
             PropertyAnimation {
-                target: window; properties: "x,y,width,height,color"; duration: 250;
+                easing.type: Easing.InOutQuad
+                target: window; properties: "x,y,width,height,color"; duration: 300;
             }
         }
     ]

@@ -1,7 +1,9 @@
 #include <QtGui/QGuiApplication>
 #include <QtQml/QQmlApplicationEngine>
 
+#include "book.h"
 #include "booksmanager.h"
+#include "epubfile.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,6 +14,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterSingletonType<BooksManager>(uri, 1, 0, "BooksManager", BooksManager::qmlSingleton);
     qmlRegisterUncreatableType<Book>(uri, 1, 0, "Book", QStringLiteral("Accessed via BooksManager"));
+    qmlRegisterType<EPUBFile>(uri, 1, 0, "EPUBFile");
 
     QQmlApplicationEngine engine(QUrl(QStringLiteral("qrc:/qml/Main.qml")));
 
